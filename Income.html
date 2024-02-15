@@ -1,3 +1,9 @@
+---
+permalink: /finance
+layout: base
+search_exclude: true
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +19,7 @@
         async function fetchFinancialTip() {
             try {
                 // Update the URL to point to your Spring backend
-                const backendUrl = 'http://localhost:8080/random-tip';
+                const backendUrl = 'http://localhost:8085';
                 const response = await fetch(backendUrl);
                 const tip = await response.text();
                 document.getElementById('financialTip').innerText = tip;
